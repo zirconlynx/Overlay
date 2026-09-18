@@ -19,7 +19,10 @@
       "target": "portable"
     },
     "mac": {
-      "target": "dmg"
+      "target": "dmg",
+      "category": "public.app-category.utilities",
+      "arch": ["universal"],
+      "gatekeeperAssess": false
     },
     "linux": {
       "target": "AppImage"
