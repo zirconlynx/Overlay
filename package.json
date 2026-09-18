@@ -1,0 +1,34 @@
+{
+  "name": "overlay-app",
+  "version": "1.0.0",
+  "description": "Small always-on-top gray overlay menu that floats above other windows",
+  "author": "zirconlynx",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder"
+  },
+  "devDependencies": {
+    "electron": "^31.0.0",
+    "electron-builder": "^24.13.3"
+  },
+  "build": {
+    "appId": "com.example.overlayapp",
+    "productName": "OverlayApp",
+    "win": {
+      "target": "portable",
+      "icon": "build/icon.ico"
+    },
+    "mac": {
+      "target": "dmg",
+      "icon": "build/icon.png"
+    },
+    "linux": {
+      "target": "AppImage",
+      "icon": "build/icon.png"
+    }
+  },
+  "allowScripts": {
+    "electron@31.7.7": true
+  }
+}
