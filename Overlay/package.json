@@ -16,16 +16,13 @@
     "appId": "com.example.overlayapp",
     "productName": "OverlayApp",
     "win": {
-      "target": "portable",
-      "icon": "build/icon.ico"
+      "target": "portable"
     },
     "mac": {
-      "target": "dmg",
-      "icon": "build/icon.png"
+      "target": "dmg"
     },
     "linux": {
-      "target": "AppImage",
-      "icon": "build/icon.png"
+      "target": "AppImage"
     }
   },
   "allowScripts": {
