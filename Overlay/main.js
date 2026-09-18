@@ -53,6 +53,8 @@ function bringOverlayToFront() {
 app.whenReady().then(() => {
   createOverlay();
 
+  // Global shortcut: works even when the overlay isn't focused, and even
+  // when some other fullscreen app currently has focus.
   const registeredFront = globalShortcut.register('CommandOrControl+Shift+V', () => {
     bringOverlayToFront();
   });
@@ -81,7 +83,7 @@ app.on('window-all-closed', () => {
 
 ipcMain.on('overlay-action', (_event, actionName) => {
   console.log(`[overlay] button clicked: ${actionName}`);
-  // TO DO: put a real behavior per action here
+  // TO DO: put actual functions per action here
 });
 
 ipcMain.on('overlay-set-click-through', (_event, enabled) => {
