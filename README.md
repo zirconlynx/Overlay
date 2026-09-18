@@ -72,15 +72,6 @@ Each button sends an action name to the main process via
 — e.g. take a screenshot, run a script, toggle another feature, call an API,
 etc. Right now it just logs the click to the console.
 
-## App icon
-
-`build/icon.ico` (Windows) and `build/icon.png` (Mac/Linux) are referenced
-by the `build` config in `package.json` and get baked into the packaged
-app automatically the next time you run `npm run dist` — no other setup
-needed. To use your own icon, replace those two files (keep the same
-names/paths), ideally starting from a square image at least 512x512px, and
-rebuild.
-
 ## Useful things to customize next
 
 - **Position/size**: change `width`, `height`, `x`, `y` in `main.js`.
@@ -94,6 +85,11 @@ rebuild.
 - **Auto-launch on login / packaging as an installer**: `npm run dist` uses
   `electron-builder` (already configured in `package.json`) to produce a
   Windows portable exe, a Mac dmg, or a Linux AppImage.
+- **Custom app icon**: currently the packaged app uses Electron's default
+  icon. To set your own, add an icon file (e.g. `build/icon.ico` for
+  Windows, `build/icon.png` for Mac/Linux) and point to it with an
+  `icon` key under `build.win` / `build.mac` / `build.linux` in
+  `package.json`.
 
 ## Notes
 
